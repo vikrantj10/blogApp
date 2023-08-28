@@ -1,0 +1,724 @@
+* {
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundcolor : rgb(255, 255, 255);
+  --blogbuttocolor : rgb(45, 45, 45);
+  --blogcardcolor : rgb(252, 252, 252);
+  --footercolor : rgb(27, 27, 27);
+  --timecolor : rgb(82, 82, 82);
+}
+
+body{
+  background-color: var(--backgroundcolor);
+}
+
+.app{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    gap: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/***************************************** NAVBAR ***********************************************/
+
+.navbar{
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.navbar img{
+  width: 4rem;
+  border-radius: 5rem;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logoname{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoname span{
+  font-size: 1.5rem;
+}
+
+
+.options{
+    display: flex;
+    gap: 2.5rem;
+    width: 32%;
+    height: 2.5rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid darkgrey;
+    align-items: center;
+    font-weight: 700;
+}
+
+.options:hover{
+    border-bottom: 2px solid black;
+    transition: linear 125ms;
+    cursor: grab;
+}
+
+.blogbtn button{
+  background: var(--blogbuttocolor);
+  color: white;
+  padding: 1.5rem;
+  width: 18.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+
+.blogbtn button:hover{
+  background-color: white;
+  color: black;
+  transition: 250ms linear;
+  cursor: grab;
+}
+
+/******************************************* NAVBAR ***********************************************/
+
+
+/******************************************* Custom Classes ***********************************/
+
+.switchorder{
+  order : 1;
+}
+
+.switchtabbg{
+  background-color: white;
+}
+
+.active{
+    opacity: 50%;
+}
+
+.switchon{
+    display: block;
+}
+
+.switchoff{
+    display: none;
+}
+
+/******************************************* Custom Classes ***********************************/
+
+
+/******************************************* HOME ****************************************************/
+
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/******************************************* Banner ****************************************************/
+
+.banner{
+    position: relative;
+    margin: auto;
+    width: 94%;
+    background: blue;
+    height: 15rem;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.banner img{
+  width: 100%;
+}
+
+.banner h5{
+    position: absolute;
+    font-family: sans-serif;
+    top: 35%;
+    color: white;
+    left: 16%;
+    font-size: 4rem;
+}
+
+/******************************************* Banner ****************************************************/
+
+
+/******************************************* Blogs ****************************************************/
+
+.blogs{
+    width: 82%;
+    display: flex;
+    background: var(--blogcardcolor);
+    margin: auto;
+    padding: 2rem;
+    gap: 1.2rem;
+    border-radius: 4rem;
+    border: 1px solid darkgrey;
+    flex-direction: column;
+}
+
+.blogsheading{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.blogitems{
+    margin-right: .5rem;
+}
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    border: 1px dotted darkgrey;
+}
+
+.blog img{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    height: 14rem;
+}
+
+.blogfeature{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.totallikes{
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.editdelete{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.blogtext{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blog h4{
+  text-transform: capitalize;
+  text-align: center;
+}
+
+
+/******************************************* Blogs ****************************************************/
+
+
+/******************************************* Footer ****************************************************/
+
+.footer{
+    background: var(--footercolor);
+    color: white;
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+}
+
+.footerdescription{
+    width: 50%;
+    text-align: start;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.footersocials{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+}
+
+/***************************************** Explore Blog ********************************/
+
+.exploreblog{
+    display: flex;
+    width: 90%;
+    gap: 1rem;
+    position: relative;
+    margin: auto;
+}
+
+.likecommentdetailscontainer{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.explorelikedetails{
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+}
+
+.explorecommentdetails{
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+}
+
+.blogdata{
+    background: var(--blogcardcolor);
+    width: 65%;
+    padding: 1rem;
+    display: flex;
+    border: 1px solid darkgrey;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+    justify-content: space-around;
+    height: min-content;
+}
+
+.blogdatadivider{
+    background: black;
+    width: 100%;
+    height: 0.1em;
+}
+
+.blogcomments{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    padding: 1.5rem;
+    background: var(--blogcardcolor);
+    border: 1px solid darkgray;
+    height: 45rem;
+    margin: auto;
+}
+
+.blogaddcomment{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.useravatar{
+    width: 12%;
+    border-radius: 2rem;
+}
+
+.inputcomment{
+    position: relative;
+    width: 100%;
+}
+
+.inputcomment input{
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.inputcomment button{
+    position: absolute;
+    padding: 0.7rem;
+    background: var(--blogbuttocolor);
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    right: 0;
+    border-bottom-left-radius: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.inputcomment button:hover{
+    cursor: grab;
+}
+
+.commentcontainer{
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;    
+    overflow-y: scroll;
+}
+
+.commentcontainer::-webkit-scrollbar{
+    width: 0;
+}
+
+.comments{
+    display: flex;
+    gap: 1rem;
+}
+
+.commentdata{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    gap: 0.5rem;
+}
+
+.usertime{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.actualcomment p{
+    font-size: 1.2rem;
+}
+
+
+
+/******************************************* Explore Blog ***********************************/
+
+
+/******************************************* Loader ************************************/
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 44%;
+}
+
+/******************************************* Loader ***********************************/
+
+
+/******************************************* User Entry Tabs ******************************/
+
+.userentrytabs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.switchuserentrytabs{
+    position: relative;
+    background: var(--blogbuttocolor);
+    border-radius: 2rem;
+    border: 1px solid grey;
+    height: 2.5rem;
+    width: 22%;
+}
+
+.signuptab{
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.signuptab a{
+    position: absolute;
+    color: white;
+    top: 15%;
+    left: 35%;
+    font-size: 1.3rem;
+}
+
+.logintab{
+    position: absolute;
+    width: 50%;
+    right: 0%;
+    height: 100%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.logintab a{
+    position: absolute;
+    color: white;
+    font-size: 1.3rem;
+    right: 35%;
+    top: 15%;
+}
+
+
+/******************************************* User Entry Tabs *******************************/
+
+
+/******************************************* User Entry ************************************/
+
+.userentry{
+    display: grid;
+    width: 80%;
+    margin: auto auto 1.8rem;
+    background-color: var(--blogcardcolor);
+    grid-template-columns: repeat(2,1fr);
+}
+
+.entryform{
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 2.5rem;
+    display: flex;
+}
+
+.entrymode{
+    display: flex;
+    gap: 0.2em;
+    align-items: center;
+    border: 1px solid black;
+    padding: 0.5rem;
+    width: 70%;
+    justify-content: center;
+}
+
+.form{
+  width: 70%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form input{
+    padding: 0.5rem;
+    background: none;
+}
+
+.otp{
+    position: relative;
+}
+
+.otp input{
+    width: 100%;
+}
+
+.otp button{
+    position: absolute;
+    right: 0%;
+    padding: 0.5rem;
+    width: 7rem;
+    background: var(--blogbuttocolor);
+    color: white;
+}
+
+.otp button:hover{
+    background-color: white;
+    color: black;
+    transition: 250ms linear;
+    cursor: grab;
+}
+
+.entryposter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signupbtn{
+    background: var(--blogbuttocolor);
+    color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+}
+
+#signupbtn:hover{
+  background-color: white;
+  color: black;
+  transition: 250ms linear;
+  cursor: grab;
+}
+
+/******************************************* User Entry ************************************/
+
+
+/******************************************* Blog App ************************************/
+
+.blogapp{
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+}
+
+.createblogcontainer{
+    width: 80%;
+    top: 2%;
+    left: 10%;
+    position: absolute;
+}
+
+.createblog{
+    display: flex;
+    border: 1px solid darkgray;
+    flex-direction: column;
+    margin: auto;
+    background: var(--blogcardcolor);
+    gap: 2rem;
+    width: 80%;
+    padding: 1.1em;
+    position: relative;
+}
+
+textarea{
+    padding: 1rem;
+    font-family: emoji;
+}
+
+textarea::placeholder{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 9rem;
+}
+
+.switchbg{
+    opacity: 80%;
+}
+
+.crossbutton{
+    position: absolute;
+    right: 3%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.formcontainer{
+    width: 80%;
+    margin: auto;
+}
+
+.formcontainer form input{
+    border: none;
+    padding: 1rem;
+    border-bottom: 1px solid darkgray;
+}
+
+.createblogsubmit{
+    width: 21rem;
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    background: var(--blogbuttocolor);
+    color: white;
+}
+
+.createblogsubmit:hover{
+    background-color: white;
+    color: black;
+    transition: 250ms linear;
+    cursor: grab;
+    border: 1px solid black;
+}
+
+.choosecategory{
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid darkgray;
+}
+
+.choosecategory select{
+    padding: 0.5rem;
+}
+
+.yourblogs{
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.yourblogscontainer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--blogcardcolor);
+    align-items: center;
+    border: 1px solid darkgray;
+}
+
+.yourblogsheader{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.yourblogcontainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+/******************************************* Blog App ************************************/
+
+
+/******************************************* All Blogs ************************************/
+
+.allblogscontainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+
+/******************************************* All Blogs ************************************/
+
+
+/******************************************* Page Not Found ************************************/
+
+
+.pagenotfound{
+    width: 80%;
+    margin: auto;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagenotfound img{
+    width: 50%;
+}
+
+
+
+/******************************************* Page Not Found ************************************/
